@@ -68,7 +68,7 @@ class Document(models.Model):
     curator = models.ForeignKey(
         Person, blank=True, null=True, verbose_name="Bearbeiter Digitalisierung"
     )
-    filesize = models.FloatField(null=True, verbose_name="Dateigröße KB")
+    filesize = models.FloatField(blank=True, null=True, verbose_name="Dateigröße KB")
     place_digizization = models.ForeignKey(
         Institution, blank=True, null=True, related_name="place_digizization",
         verbose_name="Ort der Digitalisierung"
