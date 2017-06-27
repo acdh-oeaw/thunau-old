@@ -30,8 +30,8 @@ class Document(models.Model):
     entry_order = models.CharField(
         max_length=300, blank=True, verbose_name="Ordnungskriterium/Eingabe"
     )
-    media = models.ForeignKey(
-        SkosConcept, blank=True, null=True, related_name='media', verbose_name="Medium"
+    medium = models.ForeignKey(
+        SkosConcept, blank=True, null=True, related_name='medium', verbose_name="Medium"
     )
     analogue_format = models.ForeignKey(
         SkosConcept, blank=True, null=True, related_name="analogue_format",

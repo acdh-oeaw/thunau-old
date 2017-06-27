@@ -32,7 +32,7 @@ for index, row in df.iterrows():
     vocabs_media_scheme, _ = SkosConceptScheme.objects.get_or_create(dc_title='Medium')
     vocabs_media.scheme.set([vocabs_media_scheme])
     vocabs_media.save()
-    doc.media = vocabs_media
+    doc.medium = vocabs_media
     vocabs_analogformat, _ = SkosConcept.objects.get_or_create(pref_label=row['Analoges Format'])
     vocabs_analogformat_scheme, _ = SkosConceptScheme.objects.get_or_create(dc_title='Analoges Format')
     vocabs_analogformat.scheme.set([vocabs_analogformat_scheme])
