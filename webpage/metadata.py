@@ -9,5 +9,5 @@ PROJECT_METADATA = {
     'github': 'https://github.com/acdh-oeaw/thunau',
     'purpose_de': 'Ziel des Projektes ist die Publikation von Forschungsdaten.',
     'purpose_en': 'The purpose of this Project is the publication of research data',
-    'version': '1.0.0'
+    'version': '2.0.0'
 }

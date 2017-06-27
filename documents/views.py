@@ -46,7 +46,7 @@ class DocumentUpdate(UpdateView):
 class DocumentDelete(DeleteView):
     model = Document
     template_name = 'vocabs/confirm_delete.html'
-    success_url = reverse_lazy('documents:browse_documents')
+    success_url = reverse_lazy('browsing:browse_documents')
 
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):

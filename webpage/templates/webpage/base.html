@@ -72,7 +72,7 @@
     <div class="container" id="procustom-affix">
         <div class="logo-container">
             <a href="{% url 'webpage:start' %}" class="navlink">
-                <!-- <img src="{% static 'webpage/img/test.png' %}" id="pro-logo" alt=""/> -->
+                <h2>place for some logo</h2>
             </a>
         </div>
     </div>
@@ -110,20 +110,21 @@
                         </a>
                         {% endif %}
                         <ul class="dropdown-menu procustom-dropdown-menu">
-                            <li><a href="{% url 'places:place_list' %}">Locations</a></li>
-                            <li role="separator" class="divider"></li>
                             {% if user.is_authenticated %}
+                                <li><a href="{% url 'browsing:browse_documents' %}">Documents</a></li>
+                                <li><a href="{% url 'places:place_list' %}">Locations</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="{% url 'bib:synczotero' %}">Import new Items from Zotero</a></li>
+                                <li role="separator" class="divider"></li>
+                                <!-- <li><a href="{% url 'bib:synczotero' %}">Import new Items from Zotero</a></li> -->
                             {% endif %}
                         </ul>
                     </li>
-                    <li class="dropdown">
+                    <!-- <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             Analyze the Data <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu procustom-dropdown-menu"></ul>
-                    </li>
+                    </li> -->
                     {% if user.is_authenticated %}
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">

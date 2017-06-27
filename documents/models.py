@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.urlresolvers import reverse
 from vocabs.models import SkosConcept
 from places.models import Place
 from bib.models import Book
@@ -78,3 +79,6 @@ class Document(models.Model):
 
     def __str__(self):
         return "{}".format(self.filename)
+
+    def get_absolute_url(self):
+        return reverse('documents:document_detail', kwargs={'pk': self.id})

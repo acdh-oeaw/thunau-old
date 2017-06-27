@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'django_filters',
     'django_tables2',
     'rest_framework',
+    'browsing',
     'webpage',
     'vocabs',
     'places',
@@ -47,7 +48,7 @@ REST_FRAMEWORK = {
 }
 
 SPAGHETTI_SAUCE = {
-    'apps': ['vocabs', 'places', 'bib'],
+    'apps': ['vocabs', 'places', 'bib', 'documents'],
     'show_fields': False,
     'exclude': {'auth': ['user']}
 }
